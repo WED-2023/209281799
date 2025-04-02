@@ -1,178 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html >
+
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+
 <head>
-<link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Grandma's Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v22.0">
+</script>
+
+<script>
+  function sendEmail(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const emoji = document.getElementById("emoji").value;
+
+    const subject = "הודעה מהאתר של סבתא ג׳וליה";
+    const body = `${message}\n\n${emoji}\n\nנשלח על ידי: ${email}`;
+
+    window.location.href = `mailto:danielnisanov2812@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+</script>
+
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
+  <header id="site-title">
+    <h1>Grandma Julia's Website</h1>
+  </header>
+  <nav id="menu">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#photos">My Photos</a></li>
+      <li><a href="#playlist">My Playlist</a></li>
+      <li><a href="#like">Like</a></li>
+      <li><a href="#qrcoder">QR code</a></li>
+      <li><a href="#qna">Q&A</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
 		  
-<section id="about" class="section">
+<video id="introVideo" width="100%" controls poster="poster-image.jpg">
+  <source src="grandma_video.MP4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<script>
+  const video = document.getElementById('introVideo');
+  video.addEventListener('click', function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+</script>
+
+<section id="opening" class="section" dir="rtl">
+  <p>
+"אביא לך אבנים מהירח
+</p><p>
+אתן לך אוצרות מלב הים
+</p><p>
+מה שתבקשי
+</p><p>
+מה שרק תרצי
+</p><p>
+אם את עודך
+</p><p>
+עודך שלי"
+</p><p>
+/בועז שרעבי
+</p>
+</section>
+
+<section id="about" class="section" dir="rtl">
 <br/>
+<h2 class="section-title" >About Me</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
+<p >
+  סבתא ג'וליה נולדה ב־29 במאי 1943 בלוב, בעיר טריפולי.
+  היא הייתה בתו של שלום ז"ל, יליד 1916, וטוני ז"ל, שנולדה ב־1918. 
+  ג'וליה הייתה אחת מתוך שמונה אחים ואחיות, משפחה גדולה ומלוכדת.
+</p>
+<p>
+
+  כשהייתה רק בת שנה, עלתה ג'וליה לארץ ישראל יחד עם משפחתה. 
+  הם עשו את הדרך הקשה במשאיות, דרך תעלת סואץ שבמצרים, עד שהגיעו לארץ. 
+  תחילה השתקעה המשפחה בתל אביב, ובהמשך עברה לגבעתיים.
+</p>
+<p>
+  אחד הזיכרונות הראשונים והחזקים של ג'וליה מהחיים בגבעתיים הוא מיום הכרזת המדינה, כשהייתה רק בת חמש.
+   הרגע ההיסטורי הזה נצרב בליבה, והיא זוכרת את ההתרגשות והשמחה של האנשים סביבה כאילו זה היה אתמול.
+</p>
+<p>
+  לאחר כמה שנים, עברה משפחתה של ג'וליה להקים את מושב "חצב" שבשפלה — המקום שבו היא חיה עד היום. 
+  ילדותה שם הייתה צנועה, דלה במשאבים ובכסף, אך עשירה ברוח, שמחה, הרפתקאות, וחוויות. הוריה עבדו ימים כלילות בחקלאות, והקדישו את חייהם כדי להעניק לילדיהם חינוך טוב ועתיד בטוח.
+  בבית המשפחה תמיד שררה אהבה מיוחדת לאוכל, במיוחד למאכלים הטריפוליטאים המסורתיים והאהובים: מפרום, נוקידס, קוסקוס, ממולאים — טעמים של ילדות ושל בית.
+</p>
+<p>
+  בשנת 1963, כשהייתה צעירה, התקיימה מסיבה במושב חצב.
+   ג'וליה החליטה ללכת למסיבה עם חברותיה. באותו ערב, הגיע למסיבה בחור צעיר מכפר ורבורג השכן — סבא. הוא הבחין בג'וליה והזמין אותה לרקוד. הרגע הזה היה תחילתה של אהבה גדולה. השניים התאהבו, נישאו, והקימו משפחה לתפארת — ארבעה ילדים, שפע של אהבה, וזוגיות חמה שממשיכה לפרוח עד היום.
+</p>
 <br/>
 <br/>
 </section>
 
 <section id="photos" class="section">
 <br/>
+<h2>My Photos</h2>
+<img src="photos/IMG_0820.JPEG" class="gallery-photo" />
+<img src="photos/4b31c46a-2596-4998-aaea-f9aca041047a.JPEG" class="gallery-photo" />
+<img src="photos/7c3ca1cf-a55b-491a-9757-5c6692a38295.JPEG" class="gallery-photo" />
+<img src="photos/948ef7bf-3a9b-4a64-a681-630f02c52fda.JPEG" class="gallery-photo" />
+<img src="photos/b861579c-1342-41a0-9ea7-59606c5f2b8b.JPEG" class="gallery-photo" />
+<img src="photos/DSC_0191.JPEG" class="gallery-photo" />
+<img src="photos/IMG_0012.JPEG" class="gallery-photo" />
+<img src="photos/IMG_0574.JPEG" class="gallery-photo" />
+<img src="photos/218877b3-a4e3-4df2-bf3c-07497d30a32e.JPEG" class="gallery-photo" />
+<img src="photos/IMG_0914.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1172.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1173.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1176.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1293.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1306.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1419.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1531.PNG" class="gallery-photo" />
+<img src="photos/IMG_1799.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1984.JPEG" class="gallery-photo" />
+<img src="photos/IMG_1985.JPEG" class="gallery-photo" />
+<img src="photos/IMG_2044.JPEG" class="gallery-photo" />
+<img src="photos/IMG_2875.JPEG" class="gallery-photo" />
+<img src="photos/IMG_2378.JPEG" class="gallery-photo" />
+<img src="photos/IMG_2917.JPEG" class="gallery-photo" />
+<img src="photos/IMG_2919.JPEG" class="gallery-photo" />
+<img src="photos/IMG_2957.JPEG" class="gallery-photo" />
+<img src="photos/IMG_3407.JPEG" class="gallery-photo" />
+<img src="photos/IMG_3513.JPEG" class="gallery-photo" />
+<img src="photos/IMG_3575.JPEG" class="gallery-photo" />
+<img src="photos/IMG_4876.JPEG" class="gallery-photo" />
+<img src="photos/IMG_4948.JPEG" class="gallery-photo" />
+<img src="photos/IMG_5563.JPEG" class="gallery-photo" />
+<img src="photos/IMG_5559.JPEG" class="gallery-photo" />
+<img src="photos/IMG_7097.JPEG" class="gallery-photo" />
+<img src="photos/IMG_6366.JPEG" class="gallery-photo" />
+<img src="photos/IMG_7131.JPEG" class="gallery-photo" />
+<img src="photos/IMG_7957.JPEG" class="gallery-photo" />
+<img src="photos/IMG_8950.JPEG" class="gallery-photo" />
+<img src="photos/IMG_9197.JPEG" class="gallery-photo" />
+<img src="photos/IMG_9244.JPEG" class="gallery-photo" />
+
+
 <br/>
 <br/>
+</section>
+
+<section id="playlist" class="section" dir="rtl">
+<br/>
+<h2>My Playlist</h2>
+<h3>בתחילת העמוד שמענו את סבתא ג'וליה הזמרת, עכשיו נשמע את המקור</h3><br/>
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FMh_1FuJPpE?si=TbFV6fikjFSeE_Pz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <br/>
 <br/>
+</section>
+
+<section id="like" class="section" dir="rtl">
+  <br/>
+  <h2>Give Me a Like</h2>
+  <h3>לחץ למטה כדי לעשות לייק לתמונת הפרופיל של סבתא ג'וליה בפייסבוק</h3>
+
+  <div class="fb-like" 
+    data-href="https://www.facebook.com/groups/2163296157331541/?locale=he_IL" 
+    data-width="300" 
+    data-layout="button_count" 
+    data-action="like" 
+    data-size="large" 
+    data-share="true">
+  </div>
+</section>
+
+
+<section id="qrcoder" class="section" dir="rtl">
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
+<h2>Scan My Code</h2>
+<h3>סרוק את הקוד הזה כדי לבקר באתר של סבתא ג'וליה ב-GitHub!</h3>
+<img src="qr-code.png" alt="QR Code to site" style="max-width: 200px;">
 <br/>
 <br/>
 <br/>
 </section>
 
-<section id="playlist" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
-<br/>
+
+
+<section id="qna" class="section" dir="rtl">
+  <br/>
+  <h2>Questions & Answers</h2>
+
+  <h3>1. ציינו שלושה הבדלים בין Web 1.0, Web 2.0 ו־Web 3.0:</h3>
+
+  <table class="qa-table" >
+    <thead>
+      <tr style="background-color: #e0e0e0;">
+        <th>מאפיין</th>
+        <th>Web 1.0</th>
+        <th>Web 2.0</th>
+        <th>Web 3.0</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>תפקיד המשתמש</td>
+        <td>קורא תוכן בלבד</td>
+        <td>יוצר ומשתף תוכן</td>
+        <td>משתתף חכם, מקבל מידע מותאם</td>
+      </tr>
+      <tr>
+        <td>אינטראקטיביות</td>
+        <td>דפים סטטיים</td>
+        <td>אתרים דינמיים עם תגובות</td>
+        <td>שימוש בבינה מלאכותית</td>
+      </tr>
+      <tr>
+        <td>טכנולוגיות</td>
+        <td>HTML בסיסי</td>
+        <td>JavaScript, AJAX, API</td>
+        <td>AI, Web Semantics</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <h3>2. דוגמה לתרחיש: "קניית ספר באינטרנט"</h3>
+
+  <p><strong>Web 1.0:</strong><br>
+    המשתמש נכנס לאתר שמציג קטלוג ספרים בדף HTML פשוט.
+    אין אפשרות לבצע רכישה — רק פרטי הספר מוצגים (שם, מחיר, מחבר).
+    הקנייה מתבצעת בטלפון או במייל.</p>
+
+  <p><strong>Web 2.0:</strong><br>
+    המשתמש גולש באתר מסחרי כמו "סטימצקי", בוחר ספר, מוסיף לסל, משלם באשראי.
+    יכול לקרוא ביקורות של משתמשים אחרים או להשאיר תגובה בעצמו.</p>
+
+  <p><strong>Web 3.0:</strong><br>
+    מערכת חכמה מזהה את תחומי העניין של המשתמש לפי היסטוריית קריאה, וממליצה אוטומטית על ספרים.
+    ניתן לשלם בקריפטו, או לרכוש ספר דיגיטלי שמגיע אוטומטית לחשבון אישי.</p>
 </section>
 
-<section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
-</section>
 
-<section id="qrcoder" class="section">
+<section id="contact" class="section" dir="rtl">
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
-<br/>
-<br/>
-<br/>
-</section>
+<h2>Contact Me</h2>
+<h3>מלאו את הטופס כדי לשלוח אימייל: </h3>
 
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
+  <form id="contactForm" onsubmit="sendEmail(event)" style="max-width: 500px; margin: auto;">
+    <label for="email">כתובת המייל שלך:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px;"><br>
 
-<section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+    <label for="message">ההודעה שלך:</label><br>
+    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px;"></textarea><br>
+
+    <label for="emoji">בחר/י חייכן שיתווסף להודעה:</label><br>
+    <select id="emoji" name="emoji" style="width: 100%; padding: 10px; margin-bottom: 15px;">
+      <option value="🙂">🙂 שמח</option>
+      <option value="❤️">❤️ אוהב</option>
+      <option value="😂">😂 מצחיק</option>
+      <option value="🥰">🥰 מתרגש</option>
+      <option value="👍">👍 מפרגן</option>
+    </select><br>
+
+    <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; font-size: 1em; border: none; border-radius: 6px; cursor: pointer;">שלח</button>
+  </form>
 </section>
 
 
