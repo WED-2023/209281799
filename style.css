@@ -20,8 +20,8 @@
   }
 
 body {
-	font-family: 'Rubik', sans-serif;
-	/* font-family: Britannic ; */
+	/* font-family: 'Rubik', sans-serif; */
+	font-family: Britannic ;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
@@ -29,19 +29,21 @@ body {
 	color: var(--text-color);
   }
 
-  #site-title {
+
+#site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	background-color: var(--primary-color);
-	text-align: center;
-	padding: 8px 0;
+	padding: 10px 30px;
 	font-family: 'Georgia', serif;
-	font-size: 1.5em;
-	color: white;
 	z-index: 1100;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	direction: rtl; /* אם כל האתר בעברית */
+  }
 
   #introVideo {
 	display: block;
@@ -56,74 +58,95 @@ body {
 	font-family: Calibri;
 	font-size: 1.2em;
 	color: #050505; 
-	line-height: 1.6; 
+	line-height: 1.6;
+	margin-top: 10px;
+	padding: 0 30px;	
   }
   
   #menu {
 	position: fixed;
-	top: 70px;
-	left: 0; 
-	width: 100vw;	
+	top: 90px; /* גובה מתחת לפס הכותרת */
+	width: 100%;
 	background-color: var(--heading-color);
-	backdrop-filter: blur(5px);
-	transition: background-color 0.3s ease;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 	z-index: 1000;
-	box-shadow: 0 2px 4px rgba(255, 255, 255, 0.182);
-	max-width: none;
-	margin: 0 auto;
   }
+
+  .opening-logo {
+	max-width: 180px;               /* מקטין את התמונה */
+	border-radius: 12px;            /* פינות עגולות יותר */
+	border: 2px solid #A1887F;      /* מסגרת חומה אלגנטית */
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* צל עדין */
+	display: block;
+	margin: 30px auto 10px auto;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .opening-logo:hover {
+	transform: scale(1.05);          /* הגדלה קלה בעת מעבר עכבר */
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* צל מעט עמוק יותר */
+  }
+	
+#site-title {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: var(--primary-color);
+	text-align: center;
+	padding: 12px 0;
+	font-family: 'Georgia', serif;
+	font-size: 2em;
+	color: white;
+	z-index: 1100;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  #site-title a {
+	color: white;
+	text-decoration: none;
+	transition: text-decoration 0.3s;
+
+  }
+  
+  #site-title a:hover {
+	text-decoration: underline;
+  }
+
   .section {
-	padding: 100px 20px;
-	margin-top: 120px; /* account for both title + menu */
+	/* margin-top: 180px;  */
+	padding-top: 150px;
 	min-height: 100vh;
   }
   
 
-  .section-title {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 2em;
-	font-weight: bold;
-	margin-bottom: 30px;
-	color: #333;
-	font-family: 'Rubik', sans-serif;
-  }
-  
-  .section-title::before,
-  .section-title::after {
-	content: "";
-	flex: 1;
-	height: 4px;
-	background: #00c3ff; /* פס צבעוני */
-	margin: 0 16px;
-	border-radius: 2px;
-  }
-  
   #menu ul {
 	list-style: none;
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
+	gap: 40px;
 	margin: 0;
-	padding: 10px 0;
+	padding: 0;
   }
   
   #menu li {
-	margin: 0 15px;
+	margin: 0;
 
   }
   
   #menu a {
 	text-decoration: none;
 	color: white;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: bold;
-	transition: color 0.3s;
+	transition: color 0.3s ease;
   }
   
   #menu a:hover {
-	color: var(--heading-color); /* חום כהה */
+	color: var(--heading-color);
 }
   
   

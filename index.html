@@ -27,11 +27,15 @@
   }
 </script>
 
-<body>
+<body id="top">
   <header id="site-title">
-    <h1>Grandma Julia's Website</h1>
+    <h2><a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Grandma Julia's Website</a></h2>
+
+   <!-- <h2> <a href="#top">Grandma Julia's Website</a></h2> -->
   </header>
+
   <nav id="menu">
+
     <ul>
       <li><a href="#about">About Me</a></li>
       <li><a href="#photos">My Photos</a></li>
@@ -42,11 +46,27 @@
       <li><a href="#contact">Contact Me</a></li>
     </ul>
   </nav>
-		  
-<video id="introVideo" width="100%" controls poster="poster-image.jpg">
-  <source src="grandma_video.MP4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+
+
+
+  <section id="opening" class="section" dir="rtl">
+
+    <video id="introVideo" width="100%" controls poster="poster-image.jpg">
+      <source src="grandma_video.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p>
+      העמוד הזה מוקדש לסבתא האהובה שלנו - סבתא ג'וליה.
+    </p><p>
+      תודה על מי שאת עבורנו, אמן תיהי בריאה, ותרקדי בחתונות של כולנו, עד 120🧡
+  </p>
+
+    <img src="photos/IMG_2919 - Copy.JPEG" alt="Grandma Photo" class="opening-logo">
+  </section>
+
+
 
 <script>
   const video = document.getElementById('introVideo');
@@ -59,23 +79,8 @@
   });
 </script>
 
-<section id="opening" class="section" dir="rtl">
-  <p>
-"אביא לך אבנים מהירח
-</p><p>
-אתן לך אוצרות מלב הים
-</p><p>
-מה שתבקשי
-</p><p>
-מה שרק תרצי
-</p><p>
-אם את עודך
-</p><p>
-עודך שלי"
-</p><p>
-/בועז שרעבי
-</p>
-</section>
+
+</header>
 
 <section id="about" class="section" dir="rtl">
 <br/>
