@@ -45,13 +45,13 @@ body {
 	direction: rtl; /* אם כל האתר בעברית */
   }
 
-  #introVideo {
+  /* #introVideo {
 	display: block;
-	max-height: 10vh; /* limit how tall it can be */
-	margin: 150px auto 40px auto; /* center it below your header/menu */
+	max-height: 10vh; 
+	margin: 150px auto 40px auto; 
 	border-radius: 12px;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
+  } */
 
   #opening{
 	text-align: center;
@@ -59,7 +59,7 @@ body {
 	font-size: 1.2em;
 	color: #050505; 
 	line-height: 1.6;
-	margin-top: 10px;
+	margin-top: 150px;
 	padding: 0 30px;	
   }
   
@@ -76,21 +76,21 @@ body {
 	z-index: 1000;
   }
 
-  .opening-logo {
-	max-width: 180px;               /* מקטין את התמונה */
-	border-radius: 12px;            /* פינות עגולות יותר */
-	border: 2px solid #A1887F;      /* מסגרת חומה אלגנטית */
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* צל עדין */
-	display: block;
-	margin: 30px auto 10px auto;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+.opening-logo {
+  max-width: 180px;               /* מקטין את התמונה */
+  border-radius: 12px;            /* פינות עגולות יותר */
+  border: 2px solid #A1887F;      /* מסגרת חומה אלגנטית */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* צל עדין */
+  display: block;
+  margin: 30px auto 10px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.opening-logo:hover {
+  transform: scale(1.05);          /* הגדלה קלה בעת מעבר עכבר */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* צל מעט עמוק יותר */
+}
   
-  .opening-logo:hover {
-	transform: scale(1.05);          /* הגדלה קלה בעת מעבר עכבר */
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* צל מעט עמוק יותר */
-  }
-	
 #site-title {
 	position: fixed;
 	top: 0;
