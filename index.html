@@ -284,9 +284,9 @@
   </form>
 </section>
 
-
+<!-- 
 <script type="text/javascript">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  // <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 $(function(){
   $("#nav a").click(function(e){
     e.preventDefault();
@@ -298,6 +298,32 @@ $(function(){
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
  })​
- </script>
+ </script> -->
+
+ <script type="text/javascript">
+  document.querySelectorAll("nav#menu a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100, 
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  window.addEventListener("scroll", function () {
+    const menu = document.getElementById("menu");
+    if (window.scrollY > 1000) {
+      menu.style.display = "flex";
+    } else {
+      menu.style.display = "flex"; 
+    }
+  });
+</script>
+
 </body>
 </html>
