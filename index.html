@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>Grandma's Website</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -285,6 +286,7 @@
 
 
 <script type="text/javascript">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 $(function(){
   $("#nav a").click(function(e){
     e.preventDefault();
@@ -295,7 +297,7 @@ $(function(){
 <script type="text/javascript">
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
- });​
+ })​
  </script>
 </body>
 </html>
