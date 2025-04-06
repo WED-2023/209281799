@@ -9,8 +9,11 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
+
+
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v22.0">
+<script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0">
 </script>
 
 <script>
@@ -24,9 +27,14 @@
     const subject = "הודעה מהאתר של סבתא ג׳וליה";
     const body = `${message}\n\n${emoji}\n\nנשלח על ידי: ${email}`;
 
-    window.location.href = `mailto:danielnisanov2812@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    alert("תודה! ההודעה שלך נשלחה בהצלחה 😊");
+
+    document.getElementById("contactForm").reset();
   }
 </script>
+
+
+
 
 <body id="top">
   <header id="site-title">
@@ -90,7 +98,7 @@
 <p >
   סבתא ג'וליה נולדה ב־29 במאי 1943 בלוב, בעיר טריפולי.
   היא הייתה בתו של שלום ז"ל, יליד 1916, וטוני ז"ל, שנולדה ב־1918. 
-  ג'וליה הייתה אחת מתוך שמונה אחים ואחיות, משפחה גדולה ומלוכדת.
+  ג'וליה הייתה אחת מתוך שבעה אחים ואחיות, משפחה גדולה ומלוכדת.
 </p>
 <p>
 
@@ -108,8 +116,9 @@
   בבית המשפחה תמיד שררה אהבה מיוחדת לאוכל, במיוחד למאכלים הטריפוליטאים המסורתיים והאהובים: מפרום, נוקידס, קוסקוס, ממולאים — טעמים של ילדות ושל בית.
 </p>
 <p>
-  בשנת 1963, כשהייתה צעירה, התקיימה מסיבה במושב חצב.
-   ג'וליה החליטה ללכת למסיבה עם חברותיה. באותו ערב, הגיע למסיבה בחור צעיר מכפר ורבורג השכן — סבא. הוא הבחין בג'וליה והזמין אותה לרקוד. הרגע הזה היה תחילתה של אהבה גדולה. השניים התאהבו, נישאו, והקימו משפחה לתפארת — ארבעה ילדים, שפע של אהבה, וזוגיות חמה שממשיכה לפרוח עד היום.
+  בשנת 1965, כשהייתה צעירה, התקיימה מסיבה במושב חצב.
+   ג'וליה החליטה ללכת למסיבה עם חברותיה. באותו ערב, הגיע למסיבה בחור צעיר מכפר ורבורג השכן — סבא. הוא הבחין בג'וליה והזמין אותה לרקוד. 
+   הרגע הזה היה תחילתה של אהבה גדולה. השניים התאהבו, נישאו, והקימו משפחה לתפארת — ארבעה ילדים, שפע של אהבה, וזוגיות חמה שממשיכה לפרוח עד היום.
 </p>
 <br/>
 <br/>
@@ -167,35 +176,99 @@
 <section id="playlist" class="section" dir="rtl">
 <br/>
 <h2>My Playlist</h2>
-<h3>בתחילת העמוד שמענו את סבתא ג'וליה הזמרת, עכשיו נשמע את המקור</h3><br/>
+<h3>סבתוש אוהבת הכי לשמוע שירי ארץ ישראל היפה 🎶</h3>
+<br/>
 
+<div class="playlist-container">
+  <iframe class="playlist-video"
+    src="https://www.youtube.com/embed/_f0YuwKXunc?si=y9yL51QBV0LrNJMU"
+    title="Video 1 simona dimona"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FMh_1FuJPpE?si=TbFV6fikjFSeE_Pz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe class="playlist-video"
+    src="https://www.youtube.com/embed/FMh_1FuJPpE?si=iyJHhl2Cm-oPBp54"
+    title="Video 2 shmolik"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+    
+
+  <iframe class="playlist-video"
+    src="https://www.youtube.com/embed/Xc6coB1-EPw"
+    title="Video 3 gvanim"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+</div>
 
 <br/>
 <br/>
 </section>
 
-<section id="like" class="section" dir="rtl">
+<!-- <section id="like" class="section" dir="rtl">
   <br/>
-  <h2>Give Me a Like</h2>
-  <h3>לחץ למטה כדי לעשות לייק לתמונת הפרופיל של סבתא ג'וליה בפייסבוק</h3>
+  <h2>Give a Like to Grandma's Favorite Hobby</h2>
+  <h3>סבתוש הכי אוהבת שירה בציבור 🎤 – לחצו לייק לדף האהוב עליה בפייסבוק:  </h3>
 
-  <div class="fb-like" 
-    data-href="https://www.facebook.com/groups/2163296157331541/?locale=he_IL" 
-    data-width="300" 
-    data-layout="button_count" 
-    data-action="like" 
-    data-size="large" 
+    <div class="facebook-image">
+      <a href="https://www.facebook.com/ShiraEmunah?locale=he_IL" target="_blank">
+        <img src="facebook_pic.png" alt="Facebook Page">
+      </a>
+    </div>
+    <br/><br/>
+  </section> -->
+
+
+  <section id="like" class="section" dir="rtl">
+    <br/>
+    <h2>Give a Like to Grandma's Favorite Hobby</h2>
+    <h3>סבתוש הכי אוהבת שירה בציבור 🎤 – לחצו לייק לדף האהוב עליה בפייסבוק:</h3>
+  
+
+    <!-- <button onclick="likeAlert()" class="like-button-custom">
+      ❤️ לחצו כאן כדי לעשות לייק!
+    </button>
+  
+  <script>
+    function likeAlert() {
+      alert("תודה שעשיתם לייק לעמוד שירה בציבור! 🎶 סבתוש בטוח תתרגש!");
+      window.open("https://www.facebook.com/SingAlongIL", "_blank");
+    } -->
+  </script>
+    <div class="fb-like"
+    data-href="https://www.facebook.com/ShiraEmunah"
+    data-width=""
+    data-layout="standard"
+    data-action="like"
+    data-size="large"
     data-share="true">
   </div>
+  
+    <div class="facebook-image" >
+      <a href="https://www.facebook.com/ShiraEmunah?locale=he_IL" target="_blank">
+        <img src="facebook_pic.png" alt="Facebook Page" >
+      </a>
+    </div>
+  
+  </section>
+
+
+
 </section>
+
+
+
 
 
 <section id="qrcoder" class="section" dir="rtl">
 <br/>
 <h2>Scan My Code</h2>
-<h3>סרוק את הקוד הזה כדי לבקר באתר של סבתא ג'וליה ב-GitHub!</h3>
+<h3>סרוק את הקוד הזה כדי לבקר באתר של סבתא ג'וליה ממכשיר אחר:</h3>
+</br>
 <img src="qr-code.png" alt="QR Code to site" style="max-width: 200px;">
 <br/>
 <br/>
@@ -284,21 +357,7 @@
   </form>
 </section>
 
-<!-- 
-<script type="text/javascript">
-  // <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- })​
- </script> -->
+
 
  <script type="text/javascript">
   document.querySelectorAll("nav#menu a").forEach(link => {
